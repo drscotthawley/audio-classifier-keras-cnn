@@ -9,12 +9,19 @@ In particular, like Choi's code, it uses mel-spectrograms as inputs, and a multi
 
 *(Regarding Batch Normalization: Changing the `batch_size` variable between training and evaluation may not be a good idea.)*
 
+
 ## Dependencies
 * Python
 * numpy
 * keras
 * theano or tensorflow (as backends)
 * librosa
+
+## Quick Start
+* Put your audio files in Samples/ with subdirectories for each class
+* run `python preprocess_data.py`
+* run `python train_network.py`
+* optional: run `python eval_network.py`
 
 
 ## Data Preparation
