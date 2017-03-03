@@ -3,7 +3,9 @@ Audio Classifier in Keras using Convolutional Neural Network
 
 *ok this is a public repo, but it's not quite ready for public viewing.  Come back later.*
 
-This is an amalgamation of the [Keras MNIST CNN example](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) and [@keunwoochoi](https://github.com/keunwoochoi)'s [CNN Music Tagger](https://github.com/keunwoochoi/music-auto_tagging-keras) -- I would truly say my code is just a "dumbed down" re-hash of Choi's code (that uses his ideas, just not his exact code because it was too clever for me).  In particular, it uses mel-spectrograms as inputs, and a multi-layer CNN with Batch Normalization and ELU activations. (Although ReLU seems to work just as well as ELU on the data I've tried so far.)
+This is an amalgamation of the [Keras MNIST CNN example](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) and [@keunwoochoi](https://github.com/keunwoochoi)'s [CNN Music Tagger](https://github.com/keunwoochoi/music-auto_tagging-keras) -- I would truly say my code is just a "dumbed down" re-hash of Choi's code (that uses his ideas, just not his exact code because it was too clever for me).  
+
+In particular, like Choi's code, it uses mel-spectrograms as inputs, and a multi-layer CNN with Batch Normalization and ELU activations. (Although ReLU seems to work just as well as ELU on the data I've tried so far.)
 
 *(Regarding Batch Normalization: Changing the `batch_size` variable between training and evaluation may not be a good idea.)*
 
