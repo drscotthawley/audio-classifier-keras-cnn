@@ -53,7 +53,7 @@ where N is how many augmented copies of each file you want it to create.  It wil
 
 Preprocessing will generate mel-spectrograms of all data files, and create a "new version" of `Samples/` called `Preproc/`, with the same subdirectory names, but all the .wav and .mp3 files will have ".npy" on the end now.
 
-Then you just run
+To do the preprocessing you just run
 `$ python preprocess_data.py`
 
 ...which currently doesn't DO any data augmentation, but I'm about to add that in *very* soon.
