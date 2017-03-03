@@ -62,7 +62,7 @@ On the [IDMT Audio Effects Database](https://www.idmt.fraunhofer.de/en/business_
 
 This was achieved by running for 10 hours on [our workstation with an NVIDIA GTX1080 GPU](https://pcpartpicker.com/b/4xLD4D). 
 
-**Future Work**: I just got some medical data I want to try, and it will probably require some augmentation.  And, this github repo and the code iself are still not "cleaned up" for public reading/usage.  I'm not publicising this page, just putting it up for a few collaborators.
+**Future Work**: I just got some medical data I want to try, and it will probably require some augmentation.  And, this github repo and the code iself are still not "cleaned up" for public reading/usage.  Despite being a "public" repo, I'm not publicising this page, just putting it up for a few interested parties.
 
 <hr>
 -- [@drscotthawley](https://drscotthawley.github.io), March 2, 2017
