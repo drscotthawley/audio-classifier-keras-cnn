@@ -48,12 +48,15 @@ You don't *have* to preprocess or augment the data.  If you preprocess, the data
 The "augmentation" will [vary the speed, pitch, dynamics, etc.](https://bmcfee.github.io/papers/ismir2015_augmentation.pdf) of the sound files ("data") to try to "bootstrap" some extra data with which to train.  It can either be performed *within* the preprocessing step, or you can do it *before* preprocessing as a standalone step (i.e., if you really want to be able to listen to what these augmented datasets sound like). To save disk space, I recommend doing it during preprocessing rather than as a standalone.
 
 If you want to augment first as a standalone, then you'll run it as
+
 `$ python augment_data.py <N>  Samples/*/*`
+
 where N is how many augmented copies of each file you want it to create.  It will place all of these in the Samples/ directory with some kind of "_augX" appended to the filename (where X just counts the number of the augmented data files).
 
 Preprocessing will generate mel-spectrograms of all data files, and create a "new version" of `Samples/` called `Preproc/`, with the same subdirectory names, but all the .wav and .mp3 files will have ".npy" on the end now.
 
 To do the preprocessing you just run
+
 `$ python preprocess_data.py`
 
 ...which currently doesn't DO any data augmentation, but I'm about to add that in *very* soon.
