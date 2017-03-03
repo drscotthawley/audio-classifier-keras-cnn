@@ -1,7 +1,7 @@
 # audio-classifier-keras-cnn
 Audio Classifier in Keras using Convolutional Neural Network
 
-*ok this is a public repo, but it's not quite ready for public viewing.  You might want to wait and come back later.*
+*ok this is a public repo, but it's not quite ready for public viewing.  Just letting a few students know about it for now.*
 
 This is an amalgamation of the [Keras MNIST CNN example](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) and [@keunwoochoi](https://github.com/keunwoochoi)'s [CNN Music Tagger](https://github.com/keunwoochoi/music-auto_tagging-keras) -- I would truly say my code is just a "dumbed down" re-hash of Choi's code (that uses his ideas, just not his exact code because it was too clever for me).  
 
