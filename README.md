@@ -17,7 +17,7 @@ Wrote the main code Monday night, got the results Tuesday morning, added the aug
 * librosa
 
 ## Quick Start
-* Put your audio files in Samples/ with subdirectories for each class
+* In `Samples/`, create  subdirectories for each class and put your audio files in them.
 * run `python preprocess_data.py`
 * run `python train_network.py`
 * optional: run `python eval_network.py`
