@@ -1,0 +1,3 @@
+This is just a placeholder to keep the "Samples" directory live on github.
+
+Delete this file and place your .wav or .mp3 (etc) files in this directory
