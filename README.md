@@ -72,7 +72,7 @@ After training, more diagnostics -- ROC curves, AUC -- can be obtained by runnin
 `$ python eval_network.py`
 
 ## Results
-On the [IDMT Audio Effects Database](https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/audio_effects.html) using the 20,000 monophonic guitar samples across 12 effects classes, this code achieved 99.7% accuracy and an AUC of 0.9999.  
+On the [IDMT Audio Effects Database](https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/audio_effects.html) using the 20,000 monophonic guitar samples across 12 effects classes, this code achieved 99.7% accuracy and an AUC of 0.9999.  (No augmentation was used.)
 
 <a href="url"><img src="http://i.imgur.com/nWHqAWy.png" width="400"></a>
 
