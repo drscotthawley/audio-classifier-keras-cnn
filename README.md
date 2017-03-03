@@ -63,7 +63,7 @@ After training, more diagnostics -- ROC curves, AUC -- can be obtained by runnin
 
 ## Results
 On the [IDMT Audio Effects Database](https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/audio_effects.html) using the 20,000 monophonic guitar samples across 12 effects classes, this code achieved 99.7% accuracy and an AUC of 0.9999.  This accuracy is comparable to the [original 2010 study by Stein et al.](http://www.ece.rochester.edu/courses/ECE472/resources/Papers/Stein_2010.pdf), who used a Support Vector Machine.
-[ROC_curves plot](http://i.imgur.com/nWHqAWy.png)
+![ROC_curves plot](http://i.imgur.com/nWHqAWy.png)
 
 This was achieved by running for 10 hours on [our workstation with an NVIDIA GTX1080 GPU](https://pcpartpicker.com/b/4xLD4D). 
 
