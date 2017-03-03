@@ -51,7 +51,7 @@ If you want to augment first as a standalone, then you'll run it as
 `$ python augment_data.py <N>  Samples/*/*`
 where N is how many augmented copies of each file you want it to create.  It will place all of these in the Samples/ directory with some kind of "_augX" appended to the filename (where X just counts the number of the augmented data files).
 
-Preprocessing will generate mel-spectrograms of all data files, and create a "new version" of `Samples/` called `Preproc/`, with the same subdirectories, but all the .wav and .mp3 files will have ".npy" on the end now.
+Preprocessing will generate mel-spectrograms of all data files, and create a "new version" of `Samples/` called `Preproc/`, with the same subdirectory names, but all the .wav and .mp3 files will have ".npy" on the end now.
 
 Then you just run
 `$ python preprocess_data.py`
