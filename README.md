@@ -80,7 +80,7 @@ This accuracy is comparable to the [original 2010 study by Stein et al.](http://
 
 This was achieved by running for 10 hours on [our workstation with an NVIDIA GTX1080 GPU](https://pcpartpicker.com/b/4xLD4D). 
 
-**Future Work**: I just got a new audio dataset I want to try, but it's small and will probably require some augmentation.  And, this github repo and the code iself are still not "cleaned up" for public reading/usage. 
+**Future Work**: So, the Stein et al. data was a great test case, and now we have confidence to apply this method to other datasets.  I just got a new audio dataset I want to try, but it's small and will probably require some augmentation.  And, this github repo and the code iself are still not "cleaned up" for public reading/usage. 
 
 <hr>
 -- [@drscotthawley](https://drscotthawley.github.io), March 2, 2017
