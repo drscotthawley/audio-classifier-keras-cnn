@@ -84,3 +84,5 @@ This was achieved by running for 10 hours on [our workstation with an NVIDIA GTX
 
 <hr>
 -- [@drscotthawley](https://drscotthawley.github.io), March 2, 2017
+
+PS- Thanks to [@WmHHooper](https://github.com/WmHHooper) for explaing what the ROC & AUC mean.  I'm such a noob.
