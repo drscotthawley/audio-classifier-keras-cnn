@@ -6,7 +6,7 @@ Wrote the main code Monday night, got the results Tuesday morning, added the aug
 
 This is an amalgamation of the [Keras MNIST CNN example](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) and [@keunwoochoi](https://github.com/keunwoochoi)'s [CNN Music Tagger](https://github.com/keunwoochoi/music-auto_tagging-keras) -- I would truly say my code is just a "dumbed-down rip-off" of Choi's idea (just not his exact code because it was too clever for me).  
 
-In particular, like Choi's code, it uses mel-spectrograms as inputs, and a multi-layer CNN with Batch Normalization and ELU activations. (Although ReLU seems to work just as well as ELU on the data I've tried so far.)
+In particular, like in Choi's work, it uses mel-spectrograms as inputs, and a multi-layer CNN with Batch Normalization and ELU activations. (Although ReLU seems to work just as well as ELU on the data I've tried so far.)
 
 *(Regarding Batch Normalization: Changing the `batch_size` variable between training and evaluation may not be a good idea.)*
 
