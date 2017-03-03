@@ -43,7 +43,7 @@ Also, `librosa` is going to turn stereo files into mono by, e.g. averaging the l
 
 
 ### Data preprocessing and/or augmentation:
-You don't *have* to preprocess or augment the data.  If you preprocess, it will *much* faster (e.g., 100 times faster reading in the data) if you plan on running more than once. So, preprocess.
+You don't *have* to preprocess or augment the data.  If you preprocess, the data-loading will go *much* faster (e.g., 100 times faster) the next time you try to train the network. So, preprocess.
 
 The "augmentation" will [vary the speed, pitch, dynamics, etc.](https://bmcfee.github.io/papers/ismir2015_augmentation.pdf) of the sound files ("data") to try to "bootstrap" some extra data with which to train.  It can either be performed *within* the preprocessing step, or you can do it *before* preprocessing as a standalone step (i.e., if you really want to be able to listen to what these augmented datasets sound like). To save disk space, I recommend doing it during preprocessing rather than as a standalone.
 
@@ -65,7 +65,7 @@ That's all you need.  (I should add command-line arguments to adjust the layer s
 
 It will perform an 80-20 split of training vs. testing data, and give you some validation scores along the way.  
 
-It's set to run for 2000 epochs, feel free to shorten that.
+It's set to run for 2000 epochs, feel free to shorten that.  It automatically does checkpointing by saving(/loading) the network weights via a new file `weights.hdf5`, so you can interrupt & resume the training if you need to.
 
 After training, more diagnostics -- ROC curves, AUC -- can be obtained by running
 
