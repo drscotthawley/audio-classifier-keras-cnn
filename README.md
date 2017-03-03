@@ -33,7 +33,7 @@ Also, `librosa` is going to turn stereo files into mono by, e.g. averaging the l
 ### Data preprocessing and/or augmentation:
 You don't *have* to preprocess or augment the data.  If you preprocess, it will *much* faster (e.g., 100 times faster reading in the data) if you plan on running more than once. So, preprocess.
 
-The "augmentation" will vary the speed, pitch, dynamics, etc. of the sound files ("data") to try to "bootstrap" some extra data with which to train.  It can either be performed *within* the preprocessing step, or you can do it *before* preprocessing as a standalone step, if you really want to be able to listen to what these augmented datasets sound like. To save disk space though, I recommend doing it during preprocessing rather than as a standalone.
+The "augmentation" will vary the speed, pitch, dynamics, etc. of the sound files ("data") to try to "bootstrap" some extra data with which to train.  It can either be performed *within* the preprocessing step, or you can do it *before* preprocessing as a standalone step (i.e., if you really want to be able to listen to what these augmented datasets sound like). To save disk space, I recommend doing it during preprocessing rather than as a standalone.
 
 If you want to run as a standalone, then you'll run it as
 `$ python augment_data <N>  Samples/*/*`
