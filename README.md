@@ -18,8 +18,7 @@ Sound files go into a directory called `Samples/` that is local off wherever the
 Example: for the guitar sounds in the [IDMT-SMT-Audio-Effects database](https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/audio_effects.html), using their monophonic guitar examples...
 
     $ ls -F Samples/
-    Chorus/  Distortion/  EQ/  FeedbackDelay/  Flanger/
-    NoFX/  Overdrive/  Phaser/  Reverb/  SlapbackDelay/
+    Chorus/  Distortion/  EQ/  FeedbackDelay/  Flanger/   NoFX/  Overdrive/  Phaser/  Reverb/  SlapbackDelay/
     Tremolo/  Vibrato/
     $
 (Within each subdirectory of `Samples`, there are loads of .wav or .mp3 files that correspond to each of those classes.)
