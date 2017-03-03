@@ -65,7 +65,7 @@ That's all you need.  (I should add command-line arguments to adjust the layer s
 
 It will perform an 80-20 split of training vs. testing data, and give you some validation scores along the way.  
 
-It's set to run for 2000 epochs, feel free to shorten that.  It automatically does checkpointing by saving(/loading) the network weights via a new file `weights.hdf5`, so you can interrupt & resume the training if you need to.
+It's set to run for 2000 epochs, feel free to shorten that or just ^C out at some point.  It automatically does checkpointing by saving(/loading) the network weights via a new file `weights.hdf5`, so you can interrupt & resume the training if you need to.
 
 After training, more diagnostics -- ROC curves, AUC -- can be obtained by running
 
