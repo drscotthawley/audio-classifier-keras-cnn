@@ -128,6 +128,7 @@ def main(args):
                 filename_no_ext = os.path.splitext(infile)[0]
                 ext = os.path.splitext(infile)[1]
                 outfile = filename_no_ext+"_aug"+str(i+1)+ext
+                print("      mod = ",i+1,": saving file",outfile,"...")
                 librosa.output.write_wav(outfile,mods[i+1],sr)
         else:
             print(" *** File",infile,"does not exist.  Skipping.")
