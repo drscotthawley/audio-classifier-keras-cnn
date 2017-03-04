@@ -34,7 +34,7 @@ Example: for the [IDMT-SMT-Audio-Effects database](https://www.idmt.fraunhofer.d
     Tremolo/  Vibrato/
     $
 (Within each subdirectory of `Samples`, there are loads of .wav or .mp3 files that correspond to each of those classes.)
-For now, it's assumed that all data files are exactly the same length (...and probably the same sample rate too...?).  
+For now, it's assumed that all data files have the same length & sample rate.  
 Also, `librosa` is going to turn stereo files into mono by, e.g. averaging the left & right channels. 
 
 *"Is there any sample data that comes with this repo?"  Not right now, sorry.  So the Samples directory 'ships' as empty.*
