@@ -169,7 +169,7 @@ def build_model(X,Y,nb_classes):
     nb_filters = 32  # number of convolutional filters to use
     pool_size = (2, 2)  # size of pooling area for max pooling
     kernel_size = (3, 3)  # convolution kernel size
-    nb_layers = 3
+    nb_layers = 4
     input_shape = (1, X.shape[2], X.shape[3])
 
     model = Sequential()
