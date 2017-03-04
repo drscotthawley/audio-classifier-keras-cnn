@@ -102,8 +102,9 @@ because we want to make sure statistics in training & testing are as similar as 
     print("total files = ",total_files)
 
     nb_classes = len(class_names)
-    mel_dims = get_sample_dimensions(path=path)
+
     # pre-allocate memory for speed (old method used np.concatenate, slow)
+    mel_dims = get_sample_dimensions(path=path)  # Find out the 'shape' of each data file
     X_train = np.zeros((total_train, mel_dims[1], mel_dims[2], mel_dims[3]))   
     Y_train = np.zeros((total_train, nb_classes))  
     X_test = np.zeros((total_test, mel_dims[1], mel_dims[2], mel_dims[3]))  
