@@ -141,6 +141,8 @@ def build_datasets(train_percentage=0.8, preproc=False):
               melgram = librosa.logamplitude(librosa.feature.melspectrogram(aud, sr=sr, n_mels=96),ref_power=1.0)[np.newaxis,np.newaxis,:,:]
             #end = timer()
             #print("time = ",end - start) 
+            melgram = melgram[:,:,:,0:mel_dims[3]]   # just in case files are differnt sizes: clip to first file size
+
             if (idx2 < n_train):
                 # concatenate is SLOW for big datasets; use pre-allocated instead
                 #X_train = np.concatenate((X_train, melgram), axis=0)  

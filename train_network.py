@@ -84,12 +84,12 @@ def shuffle_XY_paths(X,Y,paths):   # generates a randomized order, keeping X&Y(&
     return newX, newY, newpaths
 
 
-def build_datasets(train_percentage=0.8, preproc=False):
 '''
 So we make the training & testing datasets here, and we do it separately.
 Why not just make one big dataset, shuffle, and then split into train & test?
 because we want to make sure statistics in training & testing are as similar as possible
 '''
+def build_datasets(train_percentage=0.8, preproc=False):
     if (preproc):
         path = "Preproc/"
     else:
@@ -135,6 +135,9 @@ because we want to make sure statistics in training & testing are as similar as 
             else:
               aud, sr = librosa.load(audio_path, mono=mono,sr=None)
               melgram = librosa.logamplitude(librosa.feature.melspectrogram(aud, sr=sr, n_mels=96),ref_power=1.0)[np.newaxis,np.newaxis,:,:]
+
+            melgram = melgram[:,:,:,0:mel_dims[3]]   # just in case files are differnt sizes: clip to first file size
+       
             #end = timer()
             #print("time = ",end - start) 
             if (idx2 < n_train):
@@ -166,7 +169,7 @@ def build_model(X,Y,nb_classes):
     nb_filters = 32  # number of convolutional filters to use
     pool_size = (2, 2)  # size of pooling area for max pooling
     kernel_size = (3, 3)  # convolution kernel size
-    nb_layers = 4
+    nb_layers = 3
     input_shape = (1, X.shape[2], X.shape[3])
 
     model = Sequential()
