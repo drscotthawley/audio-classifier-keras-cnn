@@ -4,9 +4,7 @@ Audio Classifier in Keras using Convolutional Neural Network
 *ok this is a public repo, but it's not ready for public distribution.  Just letting a few students & colleagues know about it for now.
 Wrote the main code Monday night, got the results Tuesday morning, added the augmentation Wednesday night (for future use)...now posting this repo on Thursday.*
 
-This is an amalgamation of the [Keras MNIST CNN example](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) and [@keunwoochoi](https://github.com/keunwoochoi)'s [CNN Music Tagger](https://github.com/keunwoochoi/music-auto_tagging-keras) -- I would truly say my code is just a "dumbed-down rip-off" of Choi's work (just not his exact code because it was too clever for me).  
-
-In particular, like in Choi's work, it uses mel-spectrograms as inputs, and a multi-layer CNN with Batch Normalization and ELU activations. (Although ReLU seems to work just as well as ELU on the data I've tried so far.)
+**Credits:** This is an amalgamation of the [Keras MNIST CNN example](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) and [@keunwoochoi](https://github.com/keunwoochoi)'s [CNN Music Tagger](https://github.com/keunwoochoi/music-auto_tagging-keras) -- I would truly say my code is just a "dumbed-down rip-off" of Choi's work (just not his exact code because it was too clever for me).  In particular, like in Choi's work, it uses mel-spectrograms as inputs, and a multi-layer CNN with Batch Normalization and ELU activations. (Although ReLU seems to work just as well as ELU on the data I've tried so far.)
 
 *(Regarding Batch Normalization: Changing the `batch_size` variable between training and evaluation may not be a good idea.)*
 
@@ -19,7 +17,7 @@ In particular, like in Choi's work, it uses mel-spectrograms as inputs, and a mu
 * librosa
 
 ## Quick Start
-* Put your audio files in Samples/ with subdirectories for each class
+* In `Samples/`, create  subdirectories for each class and put your audio files in them.
 * run `python preprocess_data.py`
 * run `python train_network.py`
 * optional: run `python eval_network.py`
@@ -29,7 +27,7 @@ In particular, like in Choi's work, it uses mel-spectrograms as inputs, and a mu
 ### Data organization:
 Sound files should go into a directory called `Samples/` that is local off wherever the scripts are being run.  Within `Samples`, you should have subdirectories which divide up the various classes.
 
-Example: for the [IDMT-SMT-Audio-Effects database](https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/audio_effects.html), using their monophonic guitar examples...
+Example: for the [IDMT-SMT-Audio-Effects database](https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/audio_effects.html), using their monophonic guitar audio clips...
 
     $ ls -F Samples/
     Chorus/  Distortion/  EQ/  FeedbackDelay/  Flanger/   NoFX/  Overdrive/  Phaser/  Reverb/  SlapbackDelay/
@@ -48,12 +46,15 @@ You don't *have* to preprocess or augment the data.  If you preprocess, the data
 The "augmentation" will [vary the speed, pitch, dynamics, etc.](https://bmcfee.github.io/papers/ismir2015_augmentation.pdf) of the sound files ("data") to try to "bootstrap" some extra data with which to train.  It can either be performed *within* the preprocessing step, or you can do it *before* preprocessing as a standalone step (i.e., if you really want to be able to listen to what these augmented datasets sound like). To save disk space, I recommend doing it during preprocessing rather than as a standalone.
 
 If you want to augment first as a standalone, then you'll run it as
+
 `$ python augment_data.py <N>  Samples/*/*`
+
 where N is how many augmented copies of each file you want it to create.  It will place all of these in the Samples/ directory with some kind of "_augX" appended to the filename (where X just counts the number of the augmented data files).
 
 Preprocessing will generate mel-spectrograms of all data files, and create a "new version" of `Samples/` called `Preproc/`, with the same subdirectory names, but all the .wav and .mp3 files will have ".npy" on the end now.
 
-Then you just run
+To do the preprocessing you just run
+
 `$ python preprocess_data.py`
 
 ...which currently doesn't DO any data augmentation, but I'm about to add that in *very* soon.
@@ -84,3 +85,5 @@ This was achieved by running for 10 hours on [our workstation with an NVIDIA GTX
 
 <hr>
 -- [@drscotthawley](https://drscotthawley.github.io), March 2, 2017
+
+PS- Thanks to [@WmHHooper](https://github.com/WmHHooper) for explaining what ROC & AUC mean.  I'm such a noob.
