@@ -12,7 +12,7 @@ or it can be imported & called from elsewhere, e.g. prep_data.py.
 If you plan on using prep_data.py, then don't call this as a standalong. just let prep_data 
 do its thing, unless you really want to hear what the augmented data files sound like.
 '''
-
+from __future__ import print_function
 import numpy as np
 import librosa
 from random import getrandbits
@@ -99,7 +99,7 @@ def augment_data(y, sr, n_augment = 0, allow_speedandpitch = True, allow_pitch =
         # last-ditch effort to make sure we made a change (recursive/sloppy, but...works)
         if (0 == count_changes):
             print("No changes made to signal, trying again")
-            mods.append(  augment_data(y, n_augment = 1, tab="      ")[1] )
+            mods.append(  augment_data(y, sr, n_augment = 1, tab="      ")[1] )
         else:
             mods.append(y_mod)
 
@@ -121,7 +121,7 @@ def main(args):
     # read in every file on the list, augment it lots of times, output all those
     for infile in args.file:
         if os.path.isfile(infile):
-            print("Operating on file",infile,"...")
+            print("Operating on file",infile,".  Requesting ",args.N," mods...")
             y, sr = librosa.load(infile, sr=None)
             mods = augment_data(y, sr, n_augment=args.N)
             for i in range(len(mods)-1):
